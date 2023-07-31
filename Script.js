@@ -22,15 +22,21 @@ function isInLibrary(book) {
     return false;
 }
 
-const cardArea = document.querySelector(".card-container");
 
 
 
+// Temporary books to show on the page
 let bookOne = new Book("Rain in Spain", "Writerino", 50, false);
 myLibrary.push(bookOne);
 
 let bookTwo = new Book("Save the drama for yo mamma", "You know who", 15, true);
 myLibrary.push(bookTwo);
+
+
+
+// Adds the books to the cards on the page whenever the array is updated
+
+const cardArea = document.querySelector(".card-container");
 
 myLibrary.forEach((book) => {
     const bookCard = document.createElement('div');
@@ -66,5 +72,9 @@ myLibrary.forEach((book) => {
     bookCard.appendChild(remove);
 
     cardArea.appendChild(bookCard);
+});
 
+const addButton = document.querySelector(".add-button");
+addButton.addEventListener('click', () => {
+    
 });

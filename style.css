@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: grey;
+}
+
+.container {
+    height: 100%;
+    text-align: center;
+}
+
+.card-container {
+    flex-grow: 1;
+    display: flex;    
+    background-color: grey;       
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;   
+}
+
+.card {
+    max-width: 200px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    line-height: 30px;
+    
+}
+
+.card .title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card .author {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.card .remove-button {
+    align-self: center;
+    margin-top: 20px;
+    width: 150px;
+}

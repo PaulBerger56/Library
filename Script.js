@@ -21,3 +21,5 @@ function isInLibrary(book) {
     }
     return false;
 }
+
+let bookOne = new Book("Rain in Spain", "Writerino", 50, false);

@@ -48,3 +48,38 @@ body, html {
     margin-top: 20px;
     width: 150px;
 }
+
+.book-addition-card {    
+    background-color: white;
+    width: 450px;
+    height: 450px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    z-index: 10000;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1); 
+}
+
+.book-addition-card .addition-title {
+    padding: 30px;
+    font-size: 20px;
+    
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.book-addition-buttons {
+    padding: 20px;
+}

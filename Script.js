@@ -22,6 +22,12 @@ function isInLibrary(book) {
     return false;
 }
 
+function hidePopUp() {
+    bookAdditionCard.style.display = 'none';
+};
+
+
+
 
 
 
@@ -74,7 +80,16 @@ myLibrary.forEach((book) => {
     cardArea.appendChild(bookCard);
 });
 
+
+
 const addButton = document.querySelector(".add-button");
+const bookAdditionCard = document.querySelector('.book-addition-card');
+const submitButton = document.querySelector('.submit');
+const cancelButton = document.querySelector('.cancel');
+
+
 addButton.addEventListener('click', () => {
-    
+    bookAdditionCard.style.display = 'flex'
 });
+
+cancelButton.addEventListener('click', hidePopUp());

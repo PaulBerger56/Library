@@ -22,6 +22,14 @@ function isInLibrary(book) {
     return false;
 }
 
+function removeBook(title) {
+    for(let i = 0; i < myLibrary.length; i++) {
+        if(myLibrary[i].title === title) {
+            myLibrary.splice(i,1);
+        }
+    }
+}
+
 function hidePopUp() {
     bookAdditionCard.style.display = 'none';
 };
@@ -78,6 +86,12 @@ myLibrary.forEach((book) => {
     bookCard.appendChild(remove);
 
     cardArea.appendChild(bookCard);
+
+    remove.addEventListener('click', () => {
+        const titleToRemove = title.textContent;
+        removeBook(titleToRemove);
+        cardArea.removeChild(bookCard);
+    })
 });
 
 
@@ -86,6 +100,7 @@ const addButton = document.querySelector(".add-button");
 const bookAdditionCard = document.querySelector('.book-addition-card');
 const submitButton = document.querySelector('.submit');
 const cancelButton = document.querySelector('.cancel');
+
 
 
 addButton.addEventListener('click', () => {

@@ -5,13 +5,13 @@ function Book(title, author, pages, isRead) {
     this.author = author;
     this.pages = pages;
     this.isRead = isRead;
-}
+};
 
 function addBookToLibrary(book) {
     if(!isInLibrary(book)){
         myLibrary.push(book);
     }
-}
+};
 
 function isInLibrary(book) {
     for(let value of myLibrary) {
@@ -20,7 +20,7 @@ function isInLibrary(book) {
         }
     }
     return false;
-}
+};
 
 function removeBook(title) {
     for(let i = 0; i < myLibrary.length; i++) {
@@ -28,15 +28,11 @@ function removeBook(title) {
             myLibrary.splice(i,1);
         }
     }
-}
+};
 
 function hidePopUp() {
     bookAdditionCard.style.display = 'none';
 };
-
-
-
-
 
 
 // Temporary books to show on the page
@@ -87,24 +83,30 @@ myLibrary.forEach((book) => {
 
     cardArea.appendChild(bookCard);
 
+    // Add the event listener to the remove button inside the card
+    // itself so that it can grab the title from inside the same card.
     remove.addEventListener('click', () => {
         const titleToRemove = title.textContent;
         removeBook(titleToRemove);
         cardArea.removeChild(bookCard);
-    })
+    });
 });
 
 
-
+// Selection of parts of the DOM
 const addButton = document.querySelector(".add-button");
 const bookAdditionCard = document.querySelector('.book-addition-card');
 const submitButton = document.querySelector('.submit');
 const cancelButton = document.querySelector('.cancel');
 
-
-
+// Shows the popup window when Add Book is pressed
 addButton.addEventListener('click', () => {
     bookAdditionCard.style.display = 'flex'
 });
 
+// Hides the popup window when cancel is pressed inside of it
 cancelButton.addEventListener('click', hidePopUp());
+
+submitButton.addEventListener('click', () => {
+
+});
